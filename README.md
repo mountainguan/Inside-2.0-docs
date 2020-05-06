@@ -6,7 +6,7 @@ description: Inside2.0后台使用说明
 
 ## 系统结构
 
-本项目基于`Laravel 6.0`和 `laravel-admin`，拥有他们的所有特性并加以扩展，下面为`app`目录的结构：
+本项目基于[`Laravel 6.0`](https://laravel.com/docs/6.x/releases)和 [`laravel-admin`](https://laravel-admin.org/docs/zh/)，拥有他们的所有特性并加以扩展，下面为`app`目录的结构：
 
 ```bash
 app
@@ -41,7 +41,7 @@ app
 │   │   └── ApiErrorLogs.php
 │   ├── News  //公告
 │   │   └── InsideNews.php
-│   ├── Old
+│   ├── Old   //Inside1.0相关
 │   │   ├── OldT12App.php //Inside1.0的接入者Inside App数据
 │   │   └── RarAccount.php //Inside1.0的接入者账号数据
 │   ├── Traits

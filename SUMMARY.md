@@ -1,7 +1,9 @@
 # Table of contents
 
 * [概况](README.md)
-* [Insider模块基类](insider-mo-kuai-ji-lei.md)
-* [InsideConfig工具类](untitled.md)
-* [config之间应该如何搭配使用](config-zhi-jian-ying-gai-ru-he-da-pei-shi-yong.md)
+* [config介绍](config-intro.md)
+* [Insider模块基类](insider-base.md)
+* [InsideConfig工具类](config-tools.md)
+* [自定义一个测评码列表](diy-a-code-list.md)
+* [公共方法](common-func.md)
 
