@@ -45,10 +45,10 @@ $this->APPNAME;
 $this->APPKEY;
 ```
 
-**iconfig :**  用于快速使用的`InsideConfig`对象，具体使用请看`InsideConfig`
+**ACCESSSLUG :**  在生产环境中的测评的英文标识。
 
 ```php
-$this->iconfig;
+$this->ACCESSSLUG;
 ```
 
 
