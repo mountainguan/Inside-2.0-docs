@@ -23,6 +23,10 @@ app
 │   │   ├── BaseController.php    //基础类
 │   │   ├── InsideConfig.php      
 │   │   └── T12UserController.php 
+│   ├── ReportList   //存放自定义报告列表类的地方
+│   │   ├── ListView.php          //所有ReportList都必须继承的契约
+│   │   ├── LeaderproReportList.php
+│   │   └── ... 
 │   ├── ApiDebuggerController.php //调试工具
 │   ├── CallbackController.php    //回调查询
 │   ├── Dashboard.php             //inside用户首页快捷类
@@ -73,7 +77,6 @@ config
     │   └── ...
     ├── apiauth.php    //接口权限结构
     ├── apidebug.php   //api调试接口入口
-    ├── queries.php    //只需配置，实现查询功能
     └── t12.php        //T12配置，坤哥用的，不知道啥功能
 ```
 
