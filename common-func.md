@@ -111,10 +111,12 @@ _**返回值：**_
 _**例子：**_
 
 ```php
-$appKey = 'abcdddlsajldj';
-$code = 'COLD5D8EAW91';
-$timeStamps = time();
-$token= calculate_app_token($appKey,$code,$timeStamps); //生成token
-echo $token;
+$managerKey = 'abcdddlsajldj';
+$data = array(
+        'param1' => 'data1',
+        'param2' => 'data2',
+    );
+$sign = calculate_manager_sign($managerKey,$data); //生成sign
+echo $sign;
 ```
 
