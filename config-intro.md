@@ -14,7 +14,5 @@
 * 与**`config/Inside/ApiData`**文件夹协同工作；
 * 只需要依据正确的格式加载，就可以实现带权限隔离的API调试器，权限是permit字段，对**`config/Inside/apiauth`**中的权限进行使用；
 
-![](.gitbook/assets/debug.jpg)
-
-
+![](.gitbook/assets/tim-tu-pian-20200630153819.png)
 
