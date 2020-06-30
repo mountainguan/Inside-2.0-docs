@@ -8,7 +8,7 @@
 
 ## Manager API
 
-* [测评权限API](manager-api/ce-ping-quan-xian-api.md)
+* [测评权限API](manager-api/auth.md)
 * [查看权API](manager-api/viewright.md)
 * [回调地址API](manager-api/callback.md)
 
