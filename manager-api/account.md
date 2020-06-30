@@ -94,7 +94,7 @@ calculate\_manager\_sign\(\)函数加密串
 密码
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="company\_name" type="string" required=false %}
+{% api-method-parameter name="company\_name" type="string" required=true %}
 企业名称
 {% endapi-method-parameter %}
 
