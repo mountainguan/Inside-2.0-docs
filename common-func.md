@@ -120,3 +120,28 @@ $sign = calculate_manager_sign($managerKey,$data); //生成sign
 echo $sign;
 ```
 
+_**函数代码：**_
+
+```php
+/**
+ * 生成签名串 manager_sign
+ *
+ * @param string $manager_keyapp_key,接入者密钥
+ * @param string $time_stamp,时间戳.自从 Unix 纪元（格林威治时间 1970 年 1 月 1 日 00:00:00）到当前时间的秒数
+ * @return  string // 生成签名串,只取前10位
+ */
+
+function calculate_manager_sign($manager_key, $data) {
+    foreach ($data as $key => $value) {
+        if (stristr($key, 'debug_') !== false)
+            unset($data[$key]);
+    }
+    unset($data['manager_name'], $data['manager_sign']);
+    $data['manager_key'] = $manager_key;  // manager_key
+    ksort($data);                 // 所有变量按key字母从小到大排序
+    $str = http_build_query($data); // 生成string字符，key1=value1&key2=value2&.....
+    $str = substr(sha1($str), 0, 10);  // 生成签名串,只取前10位
+    return $str;
+}
+```
+
