@@ -21,7 +21,7 @@ manager专属id
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="time\_stamp" type="number" required=true %}
-时间戳
+时间戳.自从 Unix 纪元（格林威治时间 1970 年 1 月 1 日 00:00:00）到当前时间的秒数
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="username" type="string" required=true %}
@@ -72,12 +72,12 @@ calculate\_manager\_sign\(\)函数加密串
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="manager\_name" type="string" required=true %}
-manger专属id
+{% api-method-parameter name="time\_stamp" type="number" required=true %}
+时间戳.自从 Unix 纪元（格林威治时间 1970 年 1 月 1 日 00:00:00）到当前时间的秒数
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="time\_stamp" type="number" required=true %}
-时间戳
+{% api-method-parameter name="manager\_name" type="string" required=true %}
+manger专属id
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="manager\_sign" type="string" required=true %}
@@ -86,11 +86,11 @@ calculate\_manager\_sign\(\)函数加密串
 {% endapi-method-query-parameters %}
 
 {% api-method-form-data-parameters %}
-{% api-method-parameter name="username" type="string" required=false %}
+{% api-method-parameter name="username" type="string" required=true %}
 账号
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="password" type="string" required=false %}
+{% api-method-parameter name="password" type="string" required=true %}
 密码
 {% endapi-method-parameter %}
 
@@ -145,7 +145,7 @@ manager专属id
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="time\_stamp" type="number" required=true %}
-时间戳
+时间戳.自从 Unix 纪元（格林威治时间 1970 年 1 月 1 日 00:00:00）到当前时间的秒数
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -192,12 +192,12 @@ manager专属id
 需要查询的账号的app name
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="time\_stamp" type="number" required=true %}
+{% api-method-parameter name="manager\_sign" type="string" required=true %}
 calculate\_manager\_sign\(\)函数加密串
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="manager\_sign" type="string" required=true %}
-时间戳
+{% api-method-parameter name="time\_stamp" type="number" required=true %}
+时间戳.自从 Unix 纪元（格林威治时间 1970 年 1 月 1 日 00:00:00）到当前时间的秒数
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}

@@ -17,7 +17,7 @@ description: 测评权限设置管理
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="manager\_name" type="string" required=true %}
-管理api专属的name
+manager专属id
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="app\_name" type="string" required=true %}
@@ -29,7 +29,7 @@ description: 测评权限设置管理
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="manager\_sign" type="string" required=true %}
-管理者API的sign
+calculate\_manager\_sign\(\)函数加密串
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -63,7 +63,7 @@ description: 测评权限设置管理
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="manager\_name" type="string" required=true %}
-管理api专属的name
+manager专属id
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="app\_name" type="string" required=true %}
@@ -75,7 +75,7 @@ description: 测评权限设置管理
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="manager\_sign" type="string" required=true %}
-管理者API的sign
+calculate\_manager\_sign\(\)函数加密串
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 
