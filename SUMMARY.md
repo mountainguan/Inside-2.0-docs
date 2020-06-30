@@ -8,6 +8,7 @@
 
 ## Manager API
 
+* [管理账号API](manager-api/account.md)
 * [测评权限API](manager-api/auth.md)
 * [查看权API](manager-api/viewright.md)
 * [回调地址API](manager-api/callback.md)
