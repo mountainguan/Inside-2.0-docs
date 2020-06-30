@@ -4,7 +4,7 @@
 
 **`config/Inside/apiauth`**权限组织结构，3层结构：
 
-* 顶层是版本名称，需要跟**`queries`**里的name字段对应，例如：excellent、profession；
+* 顶层是版本名称，需要跟数据库中的`t12_accessments`里的en\_name字段对应，例如：excellent、profession；
 * 中间层主要分为**`base`**和**`advanced`**，即分为基础功能权限和高级功能权限，原则上还可以继续加其它分组；
 * 底层为具体功能分类，例如：测评码接口、答题接口、报告接口；
 * 每层结构使用**`apiPermitObject()`**函数来构造，第一个位置放中文名，第二个位置放英文名，第三个位置包住下一层的数组；
