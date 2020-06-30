@@ -89,3 +89,32 @@ $token= calculate_app_token($appKey,$code,$timeStamps); //生成token
 echo $token;
 ```
 
+
+
+## calculate\_manager\_sign
+
+用于生成manager\_sign
+
+_**参数：**_
+
+| 类型 | 变量名 | 默认值 | 注释 |
+| :--- | :--- | :--- | :--- |
+| string | manager\_key |  | manager key |
+| array | data |  | url上所有变量 |
+
+_**返回值：**_
+
+| 类型 | 注释 |
+| :--- | :--- |
+| string | token串 |
+
+_**例子：**_
+
+```php
+$appKey = 'abcdddlsajldj';
+$code = 'COLD5D8EAW91';
+$timeStamps = time();
+$token= calculate_app_token($appKey,$code,$timeStamps); //生成token
+echo $token;
+```
+
