@@ -100,3 +100,5 @@ calculate\_manager\_sign\(\)函数加密串
 {% endapi-method-spec %}
 {% endapi-method %}
 
+**P.S.**: auths字段应该为数组形式，每一行是一个类似于`leaderpro.base.code`这种格式的权限。
+
