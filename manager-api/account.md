@@ -4,7 +4,7 @@ description: 账号创建等管理操作
 
 # 管理账号API
 
-{% api-method method="get" host=" " path="/backdoor/company/info" %}
+{% api-method method="get" host=" " path="/backdoor/company/search" %}
 {% api-method-summary %}
 查询账号信息
 {% endapi-method-summary %}
@@ -42,7 +42,7 @@ calculate\_manager\_sign\(\)函数加密串
 
 ```javascript
 {
-    "code": 1,
+    "code": 0,
     "msg": "success",
     "data": {
         "id": 2,
@@ -60,13 +60,61 @@ calculate\_manager\_sign\(\)函数加密串
 
 
 
-{% api-method method="post" host=" " path="/backdoor/company/edit" %}
+{% api-method method="get" host=" " path="/backdoor/company/info" %}
 {% api-method-summary %}
-创建/修改 账号操作
+获取用户信息
 {% endapi-method-summary %}
 
 {% api-method-description %}
-创建或者修改账号信息
+获取用户的app name, app key等信息
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="manager\_sign" type="string" required=true %}
+calculate\_manager\_sign\(\)函数加密串
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="manager\_name" type="string" required=true %}
+manager专属id
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="time\_stamp" type="number" required=true %}
+时间戳.自从 Unix 纪元（格林威治时间 1970 年 1 月 1 日 00:00:00）到当前时间的秒数
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="company\_id" type="number" required=false %}
+\(二选一\)【优先】企业id
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="username" type="string" required=false %}
+\(二选一\)用户名称或账号
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host=" " path="/backdoor/company/create" %}
+{% api-method-summary %}
+创建 账号操作
+{% endapi-method-summary %}
+
+{% api-method-description %}
+创建账号信息
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -120,6 +168,68 @@ calculate\_manager\_sign\(\)函数加密串
 
 
 
+{% api-method method="post" host=" " path="/backdoor/company/update" %}
+{% api-method-summary %}
+修改 账号操作
+{% endapi-method-summary %}
+
+{% api-method-description %}
+修改账号信息
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="manager\_name" type="string" required=true %}
+manager专属id
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="time\_stamp" type="number" required=true %}
+时间戳.自从 Unix 纪元（格林威治时间 1970 年 1 月 1 日 00:00:00）到当前时间的秒数
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="manager\_sign" type="string" required=true %}
+calculate\_manager\_sign\(\)函数加密串
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="company\_id" type="string" required=true %}
+企业id
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+
+{% api-method-form-data-parameters %}
+{% api-method-parameter name="username" type="string" required=true %}
+账号
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="password" type="string" required=true %}
+密码
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="company\_name" type="string" required=true %}
+企业名称
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="company\_short\_name" type="string" required=false %}
+企业简称
+{% endapi-method-parameter %}
+{% endapi-method-form-data-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 {% api-method method="get" host=" " path="/backdoor/company/status" %}
 {% api-method-summary %}
 获取账号状态
@@ -158,7 +268,7 @@ manager专属id
 
 ```javascript
 {
-    "code": 1,
+    "code": 0,
     "msg": "success",
     "data": {
         "status": "activated"
@@ -210,7 +320,7 @@ calculate\_manager\_sign\(\)函数加密串
 
 ```javascript
 {
-    "code": 1,
+    "code": 0,
     "msg": "success",
     "data": []
 }

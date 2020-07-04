@@ -24,8 +24,8 @@ calculate\_manager\_sign\(\)函数加密串
 manager专属id
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="app\_name" type="string" required=true %}
-需要查询的企业的app name
+{% api-method-parameter name="company\_id" type="number" required=true %}
+企业id
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="time\_stamp" type="number" required=true %}
@@ -46,7 +46,7 @@ Cake successfully retrieved.
 
 ```javascript
 {
-    "code": 1,
+    "code": 0,
     "msg": "success",
     "data": [
         {
@@ -107,8 +107,8 @@ calculate\_manager\_sign\(\)函数加密串
 manager专属id
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="app\_name" type="string" required=true %}
-需要查询的企业的app name
+{% api-method-parameter name="company\_id" type="number" required=true %}
+企业id
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="time\_stamp" type="number" required=true %}
