@@ -4,7 +4,7 @@ description: 账号创建等管理操作
 
 # 管理账号API
 
-{% api-method method="get" host=" " path="/backdoor/company/search" %}
+{% api-method method="get" host=" " path="/backdoor/company/check" %}
 {% api-method-summary %}
 查询账号信息
 {% endapi-method-summary %}
