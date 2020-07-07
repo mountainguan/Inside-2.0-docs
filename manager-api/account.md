@@ -60,6 +60,50 @@ calculate\_manager\_sign\(\)函数加密串
 
 
 
+{% api-method method="get" host=" " path="/backdoor/accessment/all" %}
+{% api-method-summary %}
+获取测评种类
+{% endapi-method-summary %}
+
+{% api-method-description %}
+得到测评的各种详细内容，包括测评的名称，英文名，状态，类型，组成结构，量表题目数量
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="manager\_name" type="string" required=true %}
+manager专属id
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="time\_stamp" type="string" required=true %}
+时间戳.自从 Unix 纪元（格林威治时间 1970 年 1 月 1 日 00:00:00）到当前时间的秒数
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="company\_id" type="string" required=true %}
+企业id
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="manager\_sign" type="string" required=true %}
+alculate\_manager\_sign\(\)函数加密串
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 {% api-method method="get" host=" " path="/backdoor/company/info" %}
 {% api-method-summary %}
 获取用户信息
